@@ -1189,6 +1189,11 @@
     magic-string "^0.27.0"
     react-refresh "^0.14.0"
 
+"@vkruglikov/react-telegram-web-app@^2.1.9":
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/@vkruglikov/react-telegram-web-app/-/react-telegram-web-app-2.1.9.tgz#a116f6a2fd78814f0958da1f8d7c1429d41bb8e3"
+  integrity sha512-m8D5oUuSQN1z8xiG3ufh7tBbWpmp4zLtZv2rNsC2LP0Rp5vJI/hwZNk65h7wLDE740wPlE2R6bOSikm6FdUTtQ==
+
 "@walletconnect/core@2.12.2":
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/@walletconnect/core/-/core-2.12.2.tgz#12bd568b90daed876e58ebcc098c12843a3321e6"
@@ -3495,6 +3500,11 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+react-calendly@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-calendly/-/react-calendly-4.3.1.tgz#3775d468eecfdc3cb32d6cc81aac5779df129cb1"
+  integrity sha512-poyUH3NOUOlsotr8ho5WzbsbPuRAppaY+Jvu+C/PkwTP6WT807pNFI8+HrbbuRknXZbd75zpzysOJQvcu3P8Pg==
 
 react-dom@^18.2.0:
   version "18.3.1"

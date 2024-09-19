@@ -7,6 +7,7 @@ import { ConnectButton } from "thirdweb/react";
 import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { createThirdwebClient } from "thirdweb";
 import { avalancheFuji } from "thirdweb/chains";
+import { Calender } from "./components/Calender";
 
 const StyledApp = styled.div`
   background-color: #E84142;
@@ -50,6 +51,7 @@ function App() {
     <StyledApp>
       <AppContainer>
         <FlexBoxCol>
+          <Calender />
           <FlexBoxRow>
             <ConnectButton client={client} wallets={wallets} chain={avalancheFuji} showAllWallets={false} />
           </FlexBoxRow>
