@@ -4,13 +4,15 @@ import { TransactionButton, useSendTransaction } from "thirdweb/react";
 import { prepareTransaction, toWei } from "thirdweb";
 import { avalancheFuji } from "thirdweb/chains";
 import { client } from "../App";
+import { Calendar } from "./Calendar";
 
 export function TransferAvax() {
 
   const [avaxAmount, setAvaxAmount] = useState("0.01");
   const [avaxRecipient, setAvaxRecipient] = useState(
-    "0x0ecD30EDDB3c34a919BF8dcB4dA71DEA3c49A93D"
+    "0x24bF6580ED276b6ff33269DD361eE00FE3a2c912"
   );
+  const [showCalendar, setShowCalendar] = useState(false);
 
   return (
     <Card>
@@ -26,12 +28,11 @@ export function TransferAvax() {
           ></Input>
         </FlexBoxRow>
         <FlexBoxRow>
-          <label>To </label>
-          <Input
+          {/* <Input
             style={{ marginRight: 8 }}
             value={avaxRecipient}
             onChange={(e) => setAvaxRecipient(e.target.value)}
-          ></Input>
+          ></Input> */}
         </FlexBoxRow>
         <TransactionButton
             transaction={() => {
@@ -43,11 +44,15 @@ export function TransferAvax() {
             });
             return transaction;
             }}
-            onTransactionConfirmed={() => { console.log("Transaction confirmed") }}
+            onTransactionConfirmed={() => {
+              console.log("Transaction confirmed");
+              setShowCalendar(true); // Show the Calendar when transaction is confirmed
+            }}
             onError={() => { console.log("Transaction error") }}
           >
             Confirm Transaction
         </TransactionButton>
+        {showCalendar && <Calendar />} {/* Render Calendar when showCalendar is true */}
       </FlexBoxCol>
     </Card>
   );
