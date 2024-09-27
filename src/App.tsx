@@ -56,7 +56,6 @@ function App() {
             <ConnectButton client={client} wallets={wallets} chain={avalancheFuji} showAllWallets={false} />
           </FlexBoxRow>
           <TransferAvax />
-          <Counter />
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>
